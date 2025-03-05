@@ -72,8 +72,9 @@ Throughout the 30-day tracking period, data was collected using the following me
 
 #### Bivariate Analysis
 
-- Scatter plot to analyze the relationship between **Study Duration** and **Stress Level After Study**.
-- Scatter plot to analyze the relationship between **Sleep Duration** and **Stress Levels Before Study**.
+- **Scatter plot** to analyze the relationship between **Study Duration** and **StressLevelDifference**.
+- **Scatter plot** to analyze the relationship between **Sleep Duration** and **StressLevelBefore**.
+
 
 #### Multivariate Analysis
 
