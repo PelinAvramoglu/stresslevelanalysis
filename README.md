@@ -6,7 +6,7 @@ Stress, especially in academic settings, is a common reaction to the pressures o
 ## Methodology
 ### Dataset Description
 
-This dataset will be collected over a 30-day period to analyze the impact of study time, sleep duration, and stress levels leading up to an exam. Each entry represents a daily record of the following variables:
+This dataset will be collected over a 30 day period to analyze the impact of study time, sleep duration, and stress levels leading up to an exam. Each entry represents a daily record of the following variables:
 
 - **Date**: The specific date of data collection.
 - **DayOfWeek**: The day of the week, helping to identify any patterns related to specific weekdays or weekends.
@@ -32,7 +32,7 @@ This dataset will be collected over a 30-day period to analyze the impact of stu
 ### Expected Outcomes
 
 1. **Study Duration and Stress**: I expect to see an increase in stress levels as study time increases, particularly in the last few days before the exam.
-2. **Sleep Duration and Stress**: Better sleep (at least 7 hours per night) should correlate with lower stress levels, especially on intense study days.
+2. **Sleep Duration and Stress**: Better sleep should correlate with lower stress levels, especially on intense study days.
 3. **Days Until Exam**: Stress levels are expected to be higher as the exam approaches. Even if study time increases, stress will likely rise unless sleep quality is maintained.
 
 
@@ -43,8 +43,8 @@ This dataset will be collected over a 30-day period to analyze the impact of stu
 Throughout the 30-day tracking period, data was collected using the following methods:
 
 - **Study Time:** Recorded manually based on the amount of time spent studying each day.
-- **Stress Levels:** Self-reported using a stress scale (1-10) before and after each study session.
-- **Sleep Duration:** The number of hours slept each night was manually tracked.
+- **Stress Levels:** Self-reported using Samsung Health Monitor app before and after each study session.
+- **Sleep Duration:** The number of hours slept each night was tracked using the Samsung Health app, ensuring accurate and consistent data collection.
 - **Days Until Exam:** The number of days remaining until the next exam was calculated and recorded each day.
 
 
@@ -96,5 +96,5 @@ Throughout the 30-day tracking period, data was collected using the following me
 
 ## Conclusion
 
-By meticulously tracking my study time, sleep duration, and stress levels over a 30-day period, this project aims to uncover the intricate relationship between these factors and how they contribute to academic stress. As exams approach, the pressure to perform intensifies, and understanding how study time and sleep influence stress can lead to actionable insights. Through this analysis, I hope to identify patterns that can optimize my study habits and sleep routines, ultimately reducing stress and fostering a healthier, more effective approach to studying. The findings will not only enhance my personal academic performance but also provide valuable strategies for managing stress during high-pressure academic periods.
+By meticulously tracking my study time, sleep duration, and stress levels over a 30 day period, this project aims to uncover the intricate relationship between these factors and how they contribute to academic stress. As exams approach, the pressure to perform intensifies, and understanding how study time and sleep influence stress can lead to actionable insights. Through this analysis, I hope to identify patterns that can optimize my study habits and sleep routines, ultimately reducing stress and fostering a healthier, more effective approach to studying. The findings will not only enhance my personal academic performance but also provide valuable strategies for managing stress during high-pressure academic periods.
 
