@@ -35,6 +35,10 @@ This dataset will be collected over a 30 day period to analyze the impact of stu
 2. **Sleep Duration and Stress**: Better sleep should correlate with lower stress levels, especially on intense study days.
 3. **Days Until Exam**: Stress levels are expected to be higher as the exam approaches. Even if study time increases, stress will likely rise unless sleep quality is maintained.
 
+## Hypothesis
+- **Null Hypothesis (H₀):** There is no significant relationship between study duration, sleep duration, and stress levels. Stress levels remain consistent regardless of changes in study time and sleep patterns.
+- **Alternative Hypothesis (H₁):**  Study duration, sleep duration, and proximity to exams significantly impact stress levels. Increased study time and reduced sleep are associated with higher stress levels, especially as the exam approaches.
+
 
 ## Methods
 
