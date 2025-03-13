@@ -43,6 +43,7 @@ This dataset will be collected over a 30 day period to analyze the impact of stu
 ## Methods
 
 ### Data Collection
+I will collect my data as follows: I will retrieve my stress levels from the Samsung Health Monitor app through my smartwatch. My study times will be pulled from the timer I have installed on my computer. Sleep duration will be obtained from the Samsung Health app. As for the days until my exams, I will manually enter them based on my exam schedule.
 
 Throughout the 30-day tracking period, data was collected using the following methods:
 
