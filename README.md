@@ -38,7 +38,9 @@ This dataset will be collected over a 30 day period to analyze the impact of stu
 ## Hypothesis
 - **Null Hypothesis (H₀):** There is no significant relationship between study duration, sleep duration, and stress levels. Stress levels remain consistent regardless of changes in study time and sleep patterns.
 - **Alternative Hypothesis (H₁):**  Study duration, sleep duration, and proximity to exams significantly impact stress levels. Increased study time and reduced sleep are associated with higher stress levels, especially as the exam approaches.
+### Hypothesis Testing Results
 
+In this study, various hypothesis tests were conducted to examine the relationships between stress levels and different factors such as exam days, sleep duration, and study duration. The Mann-Whitney U Test revealed a significant difference in stress levels between exam and non-exam days (U = 20.000, p = 0.014453), indicating that stress increases significantly on exam days. The Kruskal-Wallis Test (H = 15.453, p = 0.001407) showed a significant variation in stress levels across different study routes. Both Spearman and Pearson correlation analyses demonstrated strong and significant negative correlations between sleep duration and stress increase (Spearman ρ = -0.915, Pearson r = -0.901, p < 0.0001), and between study duration and stress increase (Spearman ρ = -0.884, Pearson r = -0.90, p < 0.0001), suggesting that higher sleep and study durations are associated with lower stress levels. These findings highlight the critical role of time management and adequate rest in managing stress, particularly around exam periods.
 
 ## Methods
 
@@ -97,6 +99,38 @@ Throughout the 30-day tracking period, data was collected using the following me
 #### Statistical Tests
 
 - **T-tests** and **ANOVA:** To evaluate the statistical significance of differences in stress levels based on study time and sleep duration.
+  
+## Results and Graph Interpretations
+### Individual Boxplots and Histograms
+![image](https://github.com/user-attachments/assets/7256fe42-5a08-4f85-8775-3f7cd6a6670d)
+![image](https://github.com/user-attachments/assets/177b50d8-4a99-489a-97ce-be748342bedf)
+1. Sleep Duration
+Most sleep durations range from 5 to 8 hours, with the median around 6.5 hours. A few nights fall below 5 hours or above 8.5 hours, but no extreme outliers.
+
+2. Study Duration
+Study times mostly range from 3 to 6 hours, with the median slightly above 5 hours. Some days are shorter, but there are no extremely long study sessions.
+
+3. Stress Level Increase
+Stress increases are mostly between 0–2 points, with a few reaching 3–5 points. Large stress jumps are rare but occur closer to exams.
+
+4. Days Until Exam
+The data shows exams are typically 4 to 6 days away, with the median around 5 days. Only one observation was within 1–2 days before the exam.
+### Pairwise Scatterplots and Trendline Relationships
+
+![image](https://github.com/user-attachments/assets/049ab568-ea62-4350-abfb-a743d8e1c262)
+
+The marginal distributions along the diagonal reveal that most days cluster around 5–8 hours of sleep, 2–6 hours of study, a modest stress increase (around 1–4 points), and exams occurring roughly 2–8 days out. Sleep duration appears approximately normally distributed, study time is slightly right-skewed (with a few very intensive study days), stress increase is left-skewed (large stress jumps are rare), and days until exam are roughly symmetric within the observed range.
+
+Looking at the off-diagonal scatterplots with fitted trend lines, several clear patterns emerge. First, there is a strong positive association between sleep and study duration—days with more sleep also tend to be days of longer study, perhaps reflecting more balanced or productive routines. Second, sleep and stress increase are strongly negatively correlated: as sleep hours go up, the rise in stress levels drops, suggesting adequate rest buffers against exam-related anxiety. Third, sleep also shows a moderate positive link with days until exam: you tend to sleep more when the exam is still several days away and perhaps you’re less pressured. Study duration itself is negatively related to stress increase (longer study sessions coincide with smaller stress jumps) and positively related to days until exam (you study more when you still have time). Finally, stress increase and days until exam share a strong negative relationship: the closer you get to the exam date, the sharper the spike in stress. Altogether, these relationships paint a consistent picture of how rest, work, and looming deadlines interact to shape your stress levels.
+
+### Heatmap
+![image](https://github.com/user-attachments/assets/fa4760a6-5d58-4fb4-b889-0e8d7ca65a5f)
+This correlation matrix highlights the relationships between four variables: SleepDuration, StudyDuration, StressLevelIncrease, and DaysUntilExam. There is a strong positive correlation (0.9) between SleepDuration and StudyDuration, suggesting that students who sleep more also tend to study more. Both of these variables show a strong negative correlation with StressLevelIncrease (-0.9 for SleepDuration and -0.99 for StudyDuration), meaning that increased sleep and study time are associated with lower stress levels — likely indicating healthier study habits. DaysUntilExam is positively correlated with both SleepDuration (0.72) and StudyDuration (0.77), implying that when exams are far away, students sleep and study more. As exams approach, however, StressLevelIncrease shows a negative correlation with DaysUntilExam (-0.79), suggesting that stress rises as the number of days until the exam decreases. This pattern reflects a common academic scenario where looming deadlines increase anxiety and reduce healthy habits like sleep.
+
+
+
+
+
 
 
 ## Conclusion
