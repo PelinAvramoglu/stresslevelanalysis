@@ -1,4 +1,8 @@
 # The Stress Equation: How Study Time, Sleep, and Exam Pressure Interact
+## Objective (Regression): 
+Predict post-study stress levels (StressLevelAfter) from study duration, sleep hours, caffeine intake, and days until the exam.
+
+
 
 ## Project Idea
 
@@ -18,6 +22,7 @@ This dataset will be collected over a 30 day period to analyze the impact of stu
 - **SleepDuration**: The number of hours of sleep I had the night before the study day. This will help evaluate if sleep influences stress levels.
 - **DaysUntilExam**: The number of days remaining until the next exam. This will dynamically change and influence study time and stress.
 - **IsExamDay**: A binary indicator (Yes/No) showing if the day is an exam day. This is crucial for understanding how stress and study time are impacted on exam days.
+- **CaffeineIntake: Estimated caffeine intake (cups/day) based on the type of day (higher for exam prep and exam days, lower for rest days).
 
 
 
@@ -45,7 +50,7 @@ In this study, various hypothesis tests were conducted to examine the relationsh
 ## Methods
 
 ### Data Collection
-I will collect my data as follows: I will retrieve my stress levels from the Samsung Health Monitor app through my smartwatch. My study times will be pulled from the timer I have installed on my computer. Sleep duration will be obtained from the Samsung Health app. As for the days until my exams, I will manually enter them based on my exam schedule.
+I will collect my data as follows: I will retrieve my stress levels from the Samsung Health Monitor app through my smartwatch. My study times will be pulled from the timer I have installed on my computer. Sleep duration will be obtained from the Samsung Health app. As for the days until my exams, I will manually enter them based on my exam schedule. And Caffeine Intake is taken from Starbucks or Coffy app via APIs to estimate the number of cups consumed per day.
 
 Throughout the 30-day tracking period, data was collected using the following methods:
 
@@ -53,10 +58,25 @@ Throughout the 30-day tracking period, data was collected using the following me
 - **Stress Levels:** Self-reported using Samsung Health Monitor app before and after each study session.
 - **Sleep Duration:** The number of hours slept each night was tracked using the Samsung Health app, ensuring accurate and consistent data collection.
 - **Days Until Exam:** The number of days remaining until the next exam was calculated and recorded each day.
+- **Caffeine Intake: Taken from Starbucks or Coffy app via APIs to estimate the number of cups consumed per day.
+
+
 
 
 
 ### Data Processing
+
+
+#### Data Transformation  
+
+To better capture the effect of exam proximity, we categorized `DaysUntilExam` into a new feature called **`ExamPhase`**, which groups days into distinct intervals based on how close the exam is:
+
+| DaysUntilExam | ExamPhase |
+|---------------|-----------|
+| ≥ 7 days      | Far       |
+| 3–6 days      | Near      |
+| ≤ 2 days      | Imminent  |
+
 
 #### Data Cleaning
 
