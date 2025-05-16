@@ -58,6 +58,18 @@ Throughout the 30-day tracking period, data was collected using the following me
 
 ### Data Processing
 
+
+#### Data Transformation  
+
+To better capture the effect of exam proximity, we categorized `DaysUntilExam` into a new feature called **`ExamPhase`**, which groups days into distinct intervals based on how close the exam is:
+
+| DaysUntilExam | ExamPhase |
+|---------------|-----------|
+| ≥ 7 days      | Far       |
+| 3–6 days      | Near      |
+| ≤ 2 days      | Imminent  |
+
+
 #### Data Cleaning
 
 - Converted date and time data into appropriate formats for analysis.
