@@ -153,24 +153,25 @@ This correlation matrix highlights the relationships between four variables: Sle
 
 The scatter plot presents the performance of the Linear Regression model in predicting post-study stress levels. On the x-axis, actual stress levels range from approximately 6 to 11, while the predicted values on the y-axis span a similar range, indicating that the model is capable of capturing the general scale of the target variable. The red dashed line represents the ideal prediction line where predicted values exactly match actual ones. Most data points lie close to this line, such as one point where the actual stress level is around 7 and the predicted value is approximately 7.8, and another where the actual value is 11, with a predicted value near 10.1. These small deviations indicate the model slightly underestimates stress at higher levels. Nonetheless, the overall distribution of the points around the reference line suggests that the model provides a reasonably accurate fit with no significant outliers or evidence of severe prediction error.
 
-###k-Nearest Neighbors (k-NN) – Actual vs Predicted
+### k-Nearest Neighbors (k-NN) – Actual vs Predicted
 ![image](https://github.com/user-attachments/assets/c29dbd5d-a4b5-4b91-bf24-7b1d716c5814)
 
 
 The k-NN model demonstrates a moderately consistent pattern between actual and predicted stress levels. Most points lie near the ideal red dashed line, indicating relatively accurate predictions. However, there are visible deviations, especially at higher actual stress values such as 11, where predicted values drop to approximately 9.5, suggesting an underestimation. Similarly, when the actual value is 7, the model predicts stress slightly above 8, indicating slight overfitting in some low-range cases. Overall, k-NN captures the general trend but exhibits sensitivity to local variations due to its non-parametric nature.
 
 
-###Support Vector Regression – Actual vs Predicted
+### Support Vector Regression – Actual vs Predicted
 ![image](https://github.com/user-attachments/assets/bd49b378-90b2-48d5-a7dd-82eeeb5d34e9)
 
 The Support Vector Regression (SVR) model provides a relatively close approximation to actual stress levels, especially at higher values such as 11, where predictions range from 9.8 to 10.2. At lower actual values (e.g., 6 or 7), the model occasionally overpredicts, as seen with predicted values near 8. Despite these minor deviations, the overall distribution of predictions along the ideal reference line suggests that SVR performs well in modeling the stress variable, particularly in the upper-mid range, leveraging its ability to balance complexity and margin optimization.
 
-###Random Forest – Actual vs Predicted
+### Random Forest – Actual vs Predicted
 ![image](https://github.com/user-attachments/assets/e05447d5-2413-4bf1-8488-77e192b9912d)
 
 The Random Forest model shows strong predictive performance with minimal variance from the actual stress levels. Most data points align closely with the red dashed line, particularly at the extremes, such as actual stress levels of 6 and 11, where the predictions are nearly exact. The model’s ensemble nature helps reduce overfitting and enhances accuracy. For instance, at actual values of 7 and 9, the predicted levels are around 7.2 and 9.1, respectively, indicating a very low prediction error. This suggests that Random Forest is highly effective for this regression task.
 
-###Neural Network – Actual vs Predicted
+### Neural Network – Actual vs Predicted
+![image](https://github.com/user-attachments/assets/4baddb9d-87db-43b1-a03d-0b4f587774ef)
 
 The Neural Network model exhibits strong alignment with actual stress levels across the entire range. Data points are consistently positioned close to the diagonal reference line, showing accurate predictions at both low and high ends. For example, when the actual stress is 11, the model predicts approximately 10.9, and for 6, the prediction is around 6.1. This reflects the model's capacity to generalize well from limited data. The small variance in predicted values highlights the neural network’s ability to capture complex, nonlinear relationships within the dataset.
 
