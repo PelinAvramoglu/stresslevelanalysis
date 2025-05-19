@@ -161,6 +161,8 @@ The k-NN model demonstrates a moderately consistent pattern between actual and p
 
 
 ###Support Vector Regression – Actual vs Predicted
+![image](https://github.com/user-attachments/assets/bd49b378-90b2-48d5-a7dd-82eeeb5d34e9)
+
 The Support Vector Regression (SVR) model provides a relatively close approximation to actual stress levels, especially at higher values such as 11, where predictions range from 9.8 to 10.2. At lower actual values (e.g., 6 or 7), the model occasionally overpredicts, as seen with predicted values near 8. Despite these minor deviations, the overall distribution of predictions along the ideal reference line suggests that SVR performs well in modeling the stress variable, particularly in the upper-mid range, leveraging its ability to balance complexity and margin optimization.
 
 ###Random Forest – Actual vs Predicted
