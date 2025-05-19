@@ -177,8 +177,14 @@ The Neural Network model exhibits strong alignment with actual stress levels acr
 
 ### Model Error Comparison (MAE & RMSE – Lower is Better)
 ![image](https://github.com/user-attachments/assets/4052e883-f829-4dbf-9c3b-8d05dd755559)
+![image](https://github.com/user-attachments/assets/4bbd5c69-2d8f-4f05-add8-10b44b8d6320)
 
 The error metrics, Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE), are crucial indicators of model performance, where lower values signify better accuracy. Among the models, the Neural Network outperforms all others with the lowest MAE of 0.533 and RMSE of 0.622, indicating highly precise predictions. In contrast, k-Nearest Neighbors (MAE: 1.057, RMSE: 1.149) and Support Vector Regression (MAE: 0.977, RMSE: 1.081) show the highest error rates, suggesting poorer generalization. Linear Regression and Random Forest perform comparably, with Random Forest slightly edging out Linear Regression by achieving lower MAE (0.919) and RMSE (0.934) values than Linear Regression (MAE: 0.872, RMSE: 0.918).
+### R² Score Comparison (Higher is Better)
+
+The R² score, also known as the coefficient of determination, measures the proportion of variance in the dependent variable that is predictable from the independent variables. A higher R² indicates better model fit. The Neural Network achieves the highest R² score at 0.906, showcasing its superior capacity to explain the variability in stress levels. Linear Regression and Random Forest follow with R² scores of 0.796 and 0.788, respectively, indicating solid performance. Meanwhile, Support Vector Regression (0.717) and k-Nearest Neighbors (0.680) exhibit the weakest fits among the models, highlighting their relative limitations in capturing the underlying patterns in the data.
+
+
 
 ## Conclusion
 
