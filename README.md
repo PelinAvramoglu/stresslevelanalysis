@@ -146,6 +146,16 @@ Looking at the off-diagonal scatterplots with fitted trend lines, several clear 
 ### Heatmap
 ![image](https://github.com/user-attachments/assets/fa4760a6-5d58-4fb4-b889-0e8d7ca65a5f)
 This correlation matrix highlights the relationships between four variables: SleepDuration, StudyDuration, StressLevelIncrease, and DaysUntilExam. There is a strong positive correlation (0.9) between SleepDuration and StudyDuration, suggesting that students who sleep more also tend to study more. Both of these variables show a strong negative correlation with StressLevelIncrease (-0.9 for SleepDuration and -0.99 for StudyDuration), meaning that increased sleep and study time are associated with lower stress levels — likely indicating healthier study habits. DaysUntilExam is positively correlated with both SleepDuration (0.72) and StudyDuration (0.77), implying that when exams are far away, students sleep and study more. As exams approach, however, StressLevelIncrease shows a negative correlation with DaysUntilExam (-0.79), suggesting that stress rises as the number of days until the exam decreases. This pattern reflects a common academic scenario where looming deadlines increase anxiety and reduce healthy habits like sleep.
+## ML (Comparative Analysis Using Regression Techniques such as Linear Regression, kNN, SVM, Random Forest, and Neural Networks)
+
+![image](https://github.com/user-attachments/assets/b55321fc-b239-4042-b94a-90185663c9d6)
+
+
+The scatter plot presents the performance of the Linear Regression model in predicting post-study stress levels. On the x-axis, actual stress levels range from approximately 6 to 11, while the predicted values on the y-axis span a similar range, indicating that the model is capable of capturing the general scale of the target variable. The red dashed line represents the ideal prediction line where predicted values exactly match actual ones. Most data points lie close to this line, such as one point where the actual stress level is around 7 and the predicted value is approximately 7.8, and another where the actual value is 11, with a predicted value near 10.1. These small deviations indicate the model slightly underestimates stress at higher levels. Nonetheless, the overall distribution of the points around the reference line suggests that the model provides a reasonably accurate fit with no significant outliers or evidence of severe prediction error.
+
+
+
+
 
 
 
