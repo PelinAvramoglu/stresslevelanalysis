@@ -166,9 +166,12 @@ The k-NN model demonstrates a moderately consistent pattern between actual and p
 The Support Vector Regression (SVR) model provides a relatively close approximation to actual stress levels, especially at higher values such as 11, where predictions range from 9.8 to 10.2. At lower actual values (e.g., 6 or 7), the model occasionally overpredicts, as seen with predicted values near 8. Despite these minor deviations, the overall distribution of predictions along the ideal reference line suggests that SVR performs well in modeling the stress variable, particularly in the upper-mid range, leveraging its ability to balance complexity and margin optimization.
 
 ###Random Forest – Actual vs Predicted
+![image](https://github.com/user-attachments/assets/e05447d5-2413-4bf1-8488-77e192b9912d)
+
 The Random Forest model shows strong predictive performance with minimal variance from the actual stress levels. Most data points align closely with the red dashed line, particularly at the extremes, such as actual stress levels of 6 and 11, where the predictions are nearly exact. The model’s ensemble nature helps reduce overfitting and enhances accuracy. For instance, at actual values of 7 and 9, the predicted levels are around 7.2 and 9.1, respectively, indicating a very low prediction error. This suggests that Random Forest is highly effective for this regression task.
 
 ###Neural Network – Actual vs Predicted
+
 The Neural Network model exhibits strong alignment with actual stress levels across the entire range. Data points are consistently positioned close to the diagonal reference line, showing accurate predictions at both low and high ends. For example, when the actual stress is 11, the model predicts approximately 10.9, and for 6, the prediction is around 6.1. This reflects the model's capacity to generalize well from limited data. The small variance in predicted values highlights the neural network’s ability to capture complex, nonlinear relationships within the dataset.
 
 
