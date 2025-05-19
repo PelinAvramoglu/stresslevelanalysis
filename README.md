@@ -175,9 +175,10 @@ The Random Forest model shows strong predictive performance with minimal varianc
 
 The Neural Network model exhibits strong alignment with actual stress levels across the entire range. Data points are consistently positioned close to the diagonal reference line, showing accurate predictions at both low and high ends. For example, when the actual stress is 11, the model predicts approximately 10.9, and for 6, the prediction is around 6.1. This reflects the model's capacity to generalize well from limited data. The small variance in predicted values highlights the neural network’s ability to capture complex, nonlinear relationships within the dataset.
 
+### Model Error Comparison (MAE & RMSE – Lower is Better)
+![image](https://github.com/user-attachments/assets/4052e883-f829-4dbf-9c3b-8d05dd755559)
 
-
-
+The error metrics, Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE), are crucial indicators of model performance, where lower values signify better accuracy. Among the models, the Neural Network outperforms all others with the lowest MAE of 0.533 and RMSE of 0.622, indicating highly precise predictions. In contrast, k-Nearest Neighbors (MAE: 1.057, RMSE: 1.149) and Support Vector Regression (MAE: 0.977, RMSE: 1.081) show the highest error rates, suggesting poorer generalization. Linear Regression and Random Forest perform comparably, with Random Forest slightly edging out Linear Regression by achieving lower MAE (0.919) and RMSE (0.934) values than Linear Regression (MAE: 0.872, RMSE: 0.918).
 
 ## Conclusion
 
