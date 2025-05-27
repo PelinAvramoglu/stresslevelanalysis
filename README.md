@@ -1,6 +1,6 @@
 # The Stress Equation: How Study Time, Sleep, and Exam Pressure Interact
 ## Objective (Regression): 
-Predict post-study stress levels (StressLevelAfter) from study duration, sleep hours, caffeine intake, and days until the exam.
+The objective of this project is to uncover meaningful patterns among students by clustering them based on variables such as study time, sleep duration, days until exams, and weather conditions. Using the elbow method and PCA-reduced K-means clustering, we identified three distinct student groups, while the model performance summary table highlights the accuracy of various algorithms in predicting individual stress levels.
 
 
 
@@ -143,40 +143,17 @@ This correlation matrix highlights the relationships between four variables: Sle
 ## ML (Comparative Analysis Using Regression Techniques such as kNN, SVM, Random Forest, and Neural Networks)
 
 
-### k-Nearest Neighbors (k-NN) – Actual vs Predicted
-![image](https://github.com/user-attachments/assets/c29dbd5d-a4b5-4b91-bf24-7b1d716c5814)
+![image](https://github.com/user-attachments/assets/ed70d4cc-81b6-412c-97bb-efbde8948b83)
 
+According to the results, the Neural Network model outperformed the others with the lowest error rates (MAE: 0.533, RMSE: 0.622) and the highest accuracy (R²: 0.906), indicating a strong ability to predict stress levels on the test data. Among the remaining models, Random Forest also showed solid performance with an R² of 0.788, though with slightly higher errors. Support Vector Regression and k-Nearest Neighbors performed less accurately in comparison. Overall, the results suggest that the Neural Network model is the most effective for this particular regression task.
+#### Elbow Method
+![image](https://github.com/user-attachments/assets/7ca5ac43-96f6-48ea-b736-fee8c6b5cd0d)
+The Elbow Method was used to determine the optimal number of clusters based on the features: study time, sleep duration, days until exam, and weather conditions. The Within-Cluster Sum of Squares (WCSS) decreased rapidly until 
+k=3, after which the rate of improvement slowed noticeably—forming an "elbow" in the graph. This indicates that using three clusters is optimal, as it balances compact grouping with model simplicity. In this context, the three clusters likely represent students experiencing different patterns of academic workload and external stress factors, such as approaching exams and varying sleep or weather conditions.
+#### K-Means Clustering Result:
+![image](https://github.com/user-attachments/assets/8db96cda-58e4-4a47-b6d2-f0a21143a386)
 
-The k-NN model demonstrates a moderately consistent pattern between actual and predicted stress levels. Most points lie near the ideal red dashed line, indicating relatively accurate predictions. However, there are visible deviations, especially at higher actual stress values such as 11, where predicted values drop to approximately 9.5, suggesting an underestimation. Similarly, when the actual value is 7, the model predicts stress slightly above 8, indicating slight overfitting in some low-range cases. Overall, k-NN captures the general trend but exhibits sensitivity to local variations due to its non-parametric nature.
-
-
-### Support Vector Regression – Actual vs Predicted
-![image](https://github.com/user-attachments/assets/bd49b378-90b2-48d5-a7dd-82eeeb5d34e9)
-
-The Support Vector Regression (SVR) model provides a relatively close approximation to actual stress levels, especially at higher values such as 11, where predictions range from 9.8 to 10.2. At lower actual values (e.g., 6 or 7), the model occasionally overpredicts, as seen with predicted values near 8. Despite these minor deviations, the overall distribution of predictions along the ideal reference line suggests that SVR performs well in modeling the stress variable, particularly in the upper-mid range, leveraging its ability to balance complexity and margin optimization.
-
-### Random Forest – Actual vs Predicted
-![image](https://github.com/user-attachments/assets/e05447d5-2413-4bf1-8488-77e192b9912d)
-
-The Random Forest model shows strong predictive performance with minimal variance from the actual stress levels. Most data points align closely with the red dashed line, particularly at the extremes, such as actual stress levels of 6 and 11, where the predictions are nearly exact. The model’s ensemble nature helps reduce overfitting and enhances accuracy. For instance, at actual values of 7 and 9, the predicted levels are around 7.2 and 9.1, respectively, indicating a very low prediction error. This suggests that Random Forest is highly effective for this regression task.
-
-### Neural Network – Actual vs Predicted
-![image](https://github.com/user-attachments/assets/4baddb9d-87db-43b1-a03d-0b4f587774ef)
-
-The Neural Network model exhibits strong alignment with actual stress levels across the entire range. Data points are consistently positioned close to the diagonal reference line, showing accurate predictions at both low and high ends. For example, when the actual stress is 11, the model predicts approximately 10.9, and for 6, the prediction is around 6.1. This reflects the model's capacity to generalize well from limited data. The small variance in predicted values highlights the neural network’s ability to capture complex, nonlinear relationships within the dataset.
-
-### Model Error Comparison (MAE & RMSE – Lower is Better)
-![image](https://github.com/user-attachments/assets/4052e883-f829-4dbf-9c3b-8d05dd755559)
-![image](https://github.com/user-attachments/assets/4bbd5c69-2d8f-4f05-add8-10b44b8d6320)
-
-The error metrics, Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE), are crucial indicators of model performance, where lower values signify better accuracy. Among the models, the Neural Network outperforms all others with the lowest MAE of 0.533 and RMSE of 0.622, indicating highly precise predictions. In contrast, k-Nearest Neighbors (MAE: 1.057, RMSE: 1.149) and Support Vector Regression (MAE: 0.977, RMSE: 1.081) show the highest error rates, suggesting poorer generalization. Linear Regression and Random Forest perform comparably, with Random Forest slightly edging out Linear Regression by achieving lower MAE (0.919) and RMSE (0.934) values than Linear Regression (MAE: 0.872, RMSE: 0.918).
-### R² Score Comparison (Higher is Better)
-![image](https://github.com/user-attachments/assets/87c45978-b640-4010-995f-eb7a92dfeb0b)
-
-The R² score, also known as the coefficient of determination, measures the proportion of variance in the dependent variable that is predictable from the independent variables. A higher R² indicates better model fit. The Neural Network achieves the highest R² score at 0.906, showcasing its superior capacity to explain the variability in stress levels. Linear Regression and Random Forest follow with R² scores of 0.796 and 0.788, respectively, indicating solid performance. Meanwhile, Support Vector Regression (0.717) and k-Nearest Neighbors (0.680) exhibit the weakest fits among the models, highlighting their relative limitations in capturing the underlying patterns in the data.
-
-
-
+K-Means clustering was applied using the variables: study time, sleep duration, days until exam, and weather, with the results visualized in two dimensions using PCA for clarity. The plot clearly shows three distinct clusters, suggesting that the data naturally groups into three behavioral or situational profiles. For instance, one cluster might consist of students with high study time and low stress due to more days until their exams, while another may include those with poor sleep and high stress nearing exam days. This clustering provides meaningful insights into how daily routines and environmental factors correlate with stress levels, which can help in developing personalized support strategies.
 ## Conclusion
 
 By meticulously tracking my study time, sleep duration, and stress levels over a 30 day period, this project aims to uncover the intricate relationship between these factors and how they contribute to academic stress. As exams approach, the pressure to perform intensifies, and understanding how study time and sleep influence stress can lead to actionable insights. Through this analysis, I hope to identify patterns that can optimize my study habits and sleep routines, ultimately reducing stress and fostering a healthier, more effective approach to studying. The findings will not only enhance my personal academic performance but also provide valuable strategies for managing stress during high-pressure academic periods.
