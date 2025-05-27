@@ -83,11 +83,6 @@ To better capture the effect of exam proximity, we categorized `DaysUntilExam` i
 - Converted date and time data into appropriate formats for analysis.
 - Removed any missing or inconsistent data.
 
-#### Feature Engineering
-
-- **StressLevelDifference:** Calculated the difference between stress levels before and after study sessions.
-- **Study Time:** Categorized study times based on the proximity to the exam (e.g., Regular Study, Pre-Exam Study).
-- **Sleep Quality Indicator:** A binary variable indicating whether sleep duration was at least 7 hours (considered good sleep).
 
 ### Visualization Techniques
 
@@ -101,7 +96,6 @@ To better capture the effect of exam proximity, we categorized `DaysUntilExam` i
 
 - **Scatter plot** to analyze the relationship between **Study Duration** and **StressLevelDifference**.
 - **Scatter plot** to analyze the relationship between **Sleep Duration** and **StressLevelBefore**.
-
 
 #### Multivariate Analysis
 
