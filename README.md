@@ -1,6 +1,8 @@
 # The Stress Equation: How Study Time, Sleep, and Exam Pressure Interact
-## Objective (Regression): 
-Predict post-study stress levels (StressLevelAfter) from study duration, sleep hours, caffeine intake, and days until the exam.
+## Presentation:
+You can access my presentation through the website below: https://pelin-avramoglu-dsa210-term-project.netlify.app/
+## Objective: 
+The objective of this project is to uncover meaningful patterns among students by clustering them based on variables such as study time, sleep duration, days until exams, and weather conditions. Using the elbow method and PCA-reduced K-means clustering, we identified three distinct student groups, while the model performance summary table highlights the accuracy of various algorithms in predicting individual stress levels.
 
 
 
@@ -83,11 +85,6 @@ To better capture the effect of exam proximity, we categorized `DaysUntilExam` i
 - Converted date and time data into appropriate formats for analysis.
 - Removed any missing or inconsistent data.
 
-#### Feature Engineering
-
-- **StressLevelDifference:** Calculated the difference between stress levels before and after study sessions.
-- **Study Time:** Categorized study times based on the proximity to the exam (e.g., Regular Study, Pre-Exam Study).
-- **Sleep Quality Indicator:** A binary variable indicating whether sleep duration was at least 7 hours (considered good sleep).
 
 ### Visualization Techniques
 
@@ -101,7 +98,6 @@ To better capture the effect of exam proximity, we categorized `DaysUntilExam` i
 
 - **Scatter plot** to analyze the relationship between **Study Duration** and **StressLevelDifference**.
 - **Scatter plot** to analyze the relationship between **Sleep Duration** and **StressLevelBefore**.
-
 
 #### Multivariate Analysis
 
@@ -146,13 +142,20 @@ Looking at the off-diagonal scatterplots with fitted trend lines, several clear 
 ### Heatmap
 ![image](https://github.com/user-attachments/assets/fa4760a6-5d58-4fb4-b889-0e8d7ca65a5f)
 This correlation matrix highlights the relationships between four variables: SleepDuration, StudyDuration, StressLevelIncrease, and DaysUntilExam. There is a strong positive correlation (0.9) between SleepDuration and StudyDuration, suggesting that students who sleep more also tend to study more. Both of these variables show a strong negative correlation with StressLevelIncrease (-0.9 for SleepDuration and -0.99 for StudyDuration), meaning that increased sleep and study time are associated with lower stress levels — likely indicating healthier study habits. DaysUntilExam is positively correlated with both SleepDuration (0.72) and StudyDuration (0.77), implying that when exams are far away, students sleep and study more. As exams approach, however, StressLevelIncrease shows a negative correlation with DaysUntilExam (-0.79), suggesting that stress rises as the number of days until the exam decreases. This pattern reflects a common academic scenario where looming deadlines increase anxiety and reduce healthy habits like sleep.
+## ML (Comparative Analysis Using Regression Techniques such as kNN, SVM, Random Forest, and Neural Networks)
 
 
+![image](https://github.com/user-attachments/assets/ed70d4cc-81b6-412c-97bb-efbde8948b83)
 
+According to the results, the Neural Network model outperformed the others with the lowest error rates (MAE: 0.533, RMSE: 0.622) and the highest accuracy (R²: 0.906), indicating a strong ability to predict stress levels on the test data. Among the remaining models, Random Forest also showed solid performance with an R² of 0.788, though with slightly higher errors. Support Vector Regression and k-Nearest Neighbors performed less accurately in comparison. Overall, the results suggest that the Neural Network model is the most effective for this particular regression task.
+#### Elbow Method
+![image](https://github.com/user-attachments/assets/7ca5ac43-96f6-48ea-b736-fee8c6b5cd0d)
+The Elbow Method was used to determine the optimal number of clusters based on the features: study time, sleep duration, days until exam, and weather conditions. The Within-Cluster Sum of Squares (WCSS) decreased rapidly until 
+k=3, after which the rate of improvement slowed noticeably—forming an "elbow" in the graph. This indicates that using three clusters is optimal, as it balances compact grouping with model simplicity. In this context, the three clusters likely represent students experiencing different patterns of academic workload and external stress factors, such as approaching exams and varying sleep or weather conditions.
+#### K-Means Clustering Result:
+![image](https://github.com/user-attachments/assets/8db96cda-58e4-4a47-b6d2-f0a21143a386)
 
-
-
-
+K-Means clustering was applied using the variables: study time, sleep duration, days until exam, and weather, with the results visualized in two dimensions using PCA for clarity. The plot clearly shows three distinct clusters, suggesting that the data naturally groups into three behavioral or situational profiles. For instance, one cluster might consist of students with high study time and low stress due to more days until their exams, while another may include those with poor sleep and high stress nearing exam days. This clustering provides meaningful insights into how daily routines and environmental factors correlate with stress levels, which can help in developing personalized support strategies.
 ## Conclusion
 
 By meticulously tracking my study time, sleep duration, and stress levels over a 30 day period, this project aims to uncover the intricate relationship between these factors and how they contribute to academic stress. As exams approach, the pressure to perform intensifies, and understanding how study time and sleep influence stress can lead to actionable insights. Through this analysis, I hope to identify patterns that can optimize my study habits and sleep routines, ultimately reducing stress and fostering a healthier, more effective approach to studying. The findings will not only enhance my personal academic performance but also provide valuable strategies for managing stress during high-pressure academic periods.
