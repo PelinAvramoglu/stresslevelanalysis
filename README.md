@@ -1,5 +1,7 @@
 # The Stress Equation: How Study Time, Sleep, and Exam Pressure Interact
-## Objective (Regression): 
+## Presentation:
+
+## Objective: 
 The objective of this project is to uncover meaningful patterns among students by clustering them based on variables such as study time, sleep duration, days until exams, and weather conditions. Using the elbow method and PCA-reduced K-means clustering, we identified three distinct student groups, while the model performance summary table highlights the accuracy of various algorithms in predicting individual stress levels.
 
 
