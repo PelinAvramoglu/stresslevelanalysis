@@ -105,17 +105,7 @@ To better capture the effect of exam proximity, we categorized `DaysUntilExam` i
 - Bar plots to explore the relationship between **Days Until Exam** and **Stress Levels**.
 - Correlation heatmap to analyze the relationships between study time, sleep duration, and stress levels.
 
-### Machine Learning Models
 
-#### Regression Models:
-
-- **Linear Regression:** To assess the linear relationship between study time, sleep duration, and stress levels.
-- **Decision Tree:** To identify key factors influencing stress levels before and after study sessions.
-
-#### Statistical Tests
-
-- **T-tests** and **ANOVA:** To evaluate the statistical significance of differences in stress levels based on study time and sleep duration.
-  
 ## Results and Graph Interpretations
 ### Individual Boxplots and Histograms
 ![image](https://github.com/user-attachments/assets/7256fe42-5a08-4f85-8775-3f7cd6a6670d)
