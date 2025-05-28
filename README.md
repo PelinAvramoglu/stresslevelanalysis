@@ -142,12 +142,36 @@ Looking at the off-diagonal scatterplots with fitted trend lines, several clear 
 ### Heatmap
 ![image](https://github.com/user-attachments/assets/fa4760a6-5d58-4fb4-b889-0e8d7ca65a5f)
 This correlation matrix highlights the relationships between four variables: SleepDuration, StudyDuration, StressLevelIncrease, and DaysUntilExam. There is a strong positive correlation (0.9) between SleepDuration and StudyDuration, suggesting that students who sleep more also tend to study more. Both of these variables show a strong negative correlation with StressLevelIncrease (-0.9 for SleepDuration and -0.99 for StudyDuration), meaning that increased sleep and study time are associated with lower stress levels — likely indicating healthier study habits. DaysUntilExam is positively correlated with both SleepDuration (0.72) and StudyDuration (0.77), implying that when exams are far away, students sleep and study more. As exams approach, however, StressLevelIncrease shows a negative correlation with DaysUntilExam (-0.79), suggesting that stress rises as the number of days until the exam decreases. This pattern reflects a common academic scenario where looming deadlines increase anxiety and reduce healthy habits like sleep.
-## ML (Comparative Analysis Using Regression Techniques such as kNN, SVM, Random Forest, and Neural Networks)
+# ML (Comparative Analysis Using Regression Techniques such as kNN, SVM, Random Forest, and Neural Networks)
+##  Purpose of the Models and Visualizations
+n this project, various machine learning models and visualizations were used to explore and understand the relationships between daily habits and stress levels during an academic exam period. Each model and graph served a specific purpose in the analysis:
 
+Random Forest: This model was used to identify the most influential features affecting stress. The resulting feature importance graph highlighted that "Route" (how the day was spent) and "Caffeine Intake" had the greatest impact, while variables such as "IsExamDay" and "DayOfWeek" were less significant.
+
+Neural Network: The training and validation loss graph from the neural network model was used to monitor the model’s learning progress over time. The consistent decrease in both losses indicated that the model learned effectively and generalized well without overfitting.
+
+Support Vector Regression (SVR): This model was applied to predict stress levels based on features like sleep duration, study time, caffeine intake, and exam proximity. The comparison between actual and predicted values helped evaluate how accurately the model captured stress trends.
+
+Elbow Method: This technique was used to determine the optimal number of clusters for unsupervised learning. The elbow in the graph at k=3 suggested that grouping the data into three clusters would be most effective and meaningful.
+
+K-Means Clustering Result: After determining the number of clusters, K-Means was applied to group similar behavior patterns. The clusters, visualized using PCA, revealed different student profiles—such as those experiencing high stress near exams, or those with balanced routines and lower stress.
 
 ![image](https://github.com/user-attachments/assets/ed70d4cc-81b6-412c-97bb-efbde8948b83)
 
 According to the results, the Neural Network model outperformed the others with the lowest error rates (MAE: 0.533, RMSE: 0.622) and the highest accuracy (R²: 0.906), indicating a strong ability to predict stress levels on the test data. Among the remaining models, Random Forest also showed solid performance with an R² of 0.788, though with slightly higher errors. Support Vector Regression and k-Nearest Neighbors performed less accurately in comparison. Overall, the results suggest that the Neural Network model is the most effective for this particular regression task.
+#### Random forest
+![image](https://github.com/user-attachments/assets/9bab5132-b821-4628-9d7d-7ceb5f73f174)
+According to the results from the Random Forest model, the two most influential factors affecting my stress levels are “Route” (where I spend my day) and “CaffeineIntake.” This suggests that both my environment and how much caffeine I consume play a key role in how stressed I feel. On the other hand, features like “IsExamDay,” “ExamPhase,” and “DayOfWeek” seem to have very little impact. “SleepDuration” and “DaysUntilExam” showed a moderate influence, indicating that rest and the anticipation of upcoming exams still matter, but perhaps not as much as daily habits and surroundings. Overall, the findings highlight how my everyday routines and lifestyle choices contribute significantly to my stress levels.
+#### Neural Network
+![image](https://github.com/user-attachments/assets/6fc80733-fff7-45a4-a291-7c63d0dc10a2)
+The graph shows a steady decline in both training and validation loss over 100 epochs, which indicates that the neural network is learning effectively from the data. The fact that the validation loss decreases almost in parallel with the training loss suggests that the model is generalizing well and not overfitting. The gap between the two curves remains small, further confirming that the performance on unseen data closely follows the training performance. Overall, the model appears to be improving its predictions consistently across epochs, which is a strong indication of a successful training process.
+
+#### Support Vector 
+![image](https://github.com/user-attachments/assets/d25949c8-6aa6-403a-ad13-ce6633bf594f)
+
+This plot shows how well the SVR model captures the relationship between various factors and stress levels. The model predicts stress based on features such as sleep duration, study time, days until an exam, and caffeine intake. The predicted values suggest that the model understands general patterns—like higher stress levels possibly being linked to less sleep, more caffeine, or approaching exam days. However, the slight differences between actual and predicted values indicate that the model may not fully capture sudden changes in stress caused by more complex or personal factors. Still, it reflects a meaningful connection between the input data and stress level trends.
+
+
 #### Elbow Method
 ![image](https://github.com/user-attachments/assets/7ca5ac43-96f6-48ea-b736-fee8c6b5cd0d)
 The Elbow Method was used to determine the optimal number of clusters based on the features: study time, sleep duration, days until exam, and weather conditions. The Within-Cluster Sum of Squares (WCSS) decreased rapidly until 
